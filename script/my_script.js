@@ -42,7 +42,7 @@ bottone.addEventListener('click',
                         console.log("Minorenne sconto del 19.4%");
 
                         document.getElementById("age").innerHTML += "<p id=\"\prezzo_iniziale\"\></p>" + "<p id=\"\discount\"\></p>" ;
-                        document.getElementById("prezzo_iniziale").innerHTML = "Prezzo intero: " + biglietto + "€";
+                        document.getElementById("prezzo_iniziale").innerHTML = "Prezzo intero: " + biglietto.toFixed(2) + "€";
                         document.getElementById("discount").innerHTML = " Sconto minorenni del 19.4% ";
 
                         sconto = biglietto * (19.4 / 100);
@@ -56,7 +56,7 @@ bottone.addEventListener('click',
                         console.log("Over 65 sconto del 37.7%");
 
                         document.getElementById("age").innerHTML += "<p id=\"\prezzo_iniziale\"\></p>" + "<p id=\"\discount\"\></p>" ;
-                        document.getElementById("prezzo_iniziale").innerHTML = "Prezzo intero: " + biglietto + "€";
+                        document.getElementById("prezzo_iniziale").innerHTML = "Prezzo intero: " + biglietto.toFixed(2) + "€";
                         document.getElementById("discount").innerHTML = "Sconto over 65 del 37.7% ";
 
                         sconto = biglietto * (37.7 / 100);
@@ -68,7 +68,7 @@ bottone.addEventListener('click',
                     }
                     else{
                         console.log("IL PREZZO DEL BIGLIETTO INTERO E' DI: " + biglietto + "€");
-                        document.getElementById("prezzo").innerHTML = "Prezzo: " + biglietto + "€";
+                        document.getElementById("prezzo").innerHTML = "Prezzo: " + biglietto.toFixed(2) + "€";
                         biglietto = biglietto.toFixed(2);
                         biglietto = 0.233;
                     }
