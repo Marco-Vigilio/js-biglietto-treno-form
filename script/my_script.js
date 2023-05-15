@@ -5,7 +5,7 @@
 *Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
 *il prezzo del biglietto è definito in base ai km (0.233 € al km)
 *va applicato uno sconto del 19.4% per i minorenni
-va applicato uno sconto del 37.7% per gli over 65.
+*va applicato uno sconto del 37.7% per gli over 65.
 */
 
 const kilomentri = document.getElementById("num_km");
@@ -35,8 +35,8 @@ bottone.addEventListener('click',
                 biglietto = biglietto - sconto;
                 biglietto = biglietto.toFixed(2);
                 console.log("Il prezzo del biglietto è di: " + biglietto +"€");
+                document.getElementById("prezzo").innerHTML = "Prezzo: " + biglietto + "€";
                 biglietto = 1;
-                console.log("ora il biglietto ritorna a : " + biglietto);
             }
             else if(eta.value >= 65){
                 console.log("Over 65 sconto del 37.7%");
@@ -44,11 +44,13 @@ bottone.addEventListener('click',
                 biglietto = biglietto - sconto;
                 biglietto = biglietto.toFixed(2);
                 console.log("Il prezzo del biglietto è di: " + biglietto +"€");
+                document.getElementById("prezzo").innerHTML = "Prezzo: " + biglietto + "€";
                 biglietto = 1;
-                console.log("ora il biglietto ritorna a : " + biglietto);
             }
             else{
                 console.log("IL PREZZO DEL BIGLIETTO INTERO E' DI: " + biglietto + "€");
+                document.getElementById("prezzo").innerHTML = "Prezzo: " + biglietto + "€";
+                biglietto = 1;
             }
         }
         console.log();
