@@ -28,7 +28,7 @@ bottone.addEventListener('click',
         else{
             if((parseInt(kilomentri.value) > 0) ){
 
-                if(parseInt(eta.value) >= 0){
+                if((parseInt(eta.value) >= 0) || (parseInt(eta.value) <= 110)){
 
                     console.log("hai inserito dei numeri bravo");
                     biglietto = biglietto * parseInt(kilomentri.value);
@@ -57,9 +57,6 @@ bottone.addEventListener('click',
                         biglietto = 1;
                     }
 
-                }
-                else if(parseInt(eta.value) > 110){
-                    alert("Complimenti per l'età metti comunque un numero tra 0 - 110");
                 }
                 else{
                     alert("Attenzione inserire l'età corretta");
