@@ -8,13 +8,23 @@ va applicato uno sconto del 19.4% per i minorenni
 va applicato uno sconto del 37.7% per gli over 65.
 */
 
-const kilomentri = 0;
-const eta = 0;
+const kilomentri = document.getElementById("num_km");
+const eta = document.getElementById("num_age");
 
-document.querySelector("num_km");
-//kilomentri = document.getElementById("num_km.value");
+const bottone = document.querySelector("#botton");
 
-/*
-console.log(document.querySelector("#num_km.value"));
-console.log(document.querySelector("num_age"));
-*/
+bottone.addEventListener('click', 
+    function(){
+
+        console.log(kilomentri.value);
+        console.log(eta.value);
+
+        if((eta.value || kilomentri.value) == ""){
+            alert("Attenzione non hai inserito correttamente un numero. inserire un numero");
+        }
+        else{
+            console.log("hai inserito dei numeri bravo");
+        }
+        console.log();
+    }
+);
