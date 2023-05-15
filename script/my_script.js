@@ -11,7 +11,7 @@
 const kilomentri = document.getElementById("num_km");
 const eta = document.getElementById("num_age");
 
-let biglietto = 1;
+let biglietto = 0.233;
 let sconto;
 
 const bottone = document.querySelector("#botton");
@@ -50,7 +50,7 @@ bottone.addEventListener('click',
                         biglietto = biglietto.toFixed(2);
                         console.log("Il prezzo del biglietto è di: " + biglietto +"€");
                         document.getElementById("prezzo").innerHTML = "Prezzo finale : " + biglietto + "€";
-                        biglietto = 1;
+                        biglietto = 0.233;
                     }
                     else if(eta.value >= 65){
                         console.log("Over 65 sconto del 37.7%");
@@ -58,18 +58,18 @@ bottone.addEventListener('click',
                         document.getElementById("age").innerHTML += "<p id=\"\prezzo_iniziale\"\></p>" + "<p id=\"\discount\"\></p>" ;
                         document.getElementById("prezzo_iniziale").innerHTML = "Prezzo intero: " + biglietto + "€";
                         document.getElementById("discount").innerHTML = "Sconto over 65 del 37.7% ";
-                        
+
                         sconto = biglietto * (37.7 / 100);
                         biglietto = biglietto - sconto;
                         biglietto = biglietto.toFixed(2);
                         console.log("Il prezzo del biglietto è di: " + biglietto +"€");
                         document.getElementById("prezzo").innerHTML = "Prezzo finale : " + biglietto + "€";
-                        biglietto = 1;
+                        biglietto = 0.233;
                     }
                     else{
                         console.log("IL PREZZO DEL BIGLIETTO INTERO E' DI: " + biglietto + "€");
                         document.getElementById("prezzo").innerHTML = "Prezzo: " + biglietto + "€";
-                        biglietto = 1;
+                        biglietto = 0.233;
                     }
 
                 }
