@@ -69,6 +69,7 @@ bottone.addEventListener('click',
                     else{
                         console.log("IL PREZZO DEL BIGLIETTO INTERO E' DI: " + biglietto + "€");
                         document.getElementById("prezzo").innerHTML = "Prezzo: " + biglietto + "€";
+                        biglietto = biglietto.toFixed(2);
                         biglietto = 0.233;
                     }
 
